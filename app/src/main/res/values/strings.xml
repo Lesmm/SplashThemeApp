@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">开门</string>
+
+    <string name="hke">播放本地</string>
+    <string name="hkf">最近播放</string>
+    <string name="hkg">听歌识曲</string>
+    <string name="hkh">搜索歌曲</string>
+
+</resources>

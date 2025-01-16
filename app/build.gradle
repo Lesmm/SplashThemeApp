@@ -1,0 +1,61 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    compileSdk 32
+
+    namespace 'com.newbee.fish.app'
+    namespace 'com.taobao.idlefish'
+    namespace 'ccom.tencent.qqmusic'
+//    namespace 'com.eg.android.AlipayGphone'
+
+    defaultConfig {
+        applicationId "com.newbee.fish.app"
+        applicationId "com.taobao.idlefish"
+        applicationId "com.tencent.qqmusic"
+//        applicationId "com.eg.android.AlipayGphone"
+
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.22.1'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+
+    // https://developer.android.com/develop/ui/views/launch/splash-screen/migrate
+    // implementation "androidx.core:core-splashscreen:1.0.1"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/shortcut_local" android:enabled="true" android:shortcutId="playLocal" android:shortcutShortLabel="@string/hke" android:shortcutLongLabel="@string/hke" android:shortcutDisabledMessage="@string/hke">
+        <intent android:targetPackage="com.newbee.fish.app" android:action="android.intent.action.VIEW" android:targetClass="com.newbee.fish.app.MainActivity">
+            <extra android:name="shortcutScheme" android:value="playLocal" />
+        </intent>
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_recent" android:enabled="true" android:shortcutId="playRecent" android:shortcutShortLabel="@string/hkf" android:shortcutLongLabel="@string/hkf" android:shortcutDisabledMessage="@string/hkf">
+        <intent android:targetPackage="com.newbee.fish.app" android:action="android.intent.action.VIEW" android:targetClass="com.newbee.fish.app.MainActivity">
+            <extra android:name="shortcutScheme" android:value="playRecent" />
+        </intent>
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_search" android:enabled="true" android:shortcutId="searchSong" android:shortcutShortLabel="@string/hkh" android:shortcutLongLabel="@string/hkh" android:shortcutDisabledMessage="@string/hkh">
+        <intent android:targetPackage="com.newbee.fish.app" android:action="android.intent.action.VIEW" android:targetClass="com.newbee.fish.app.MainActivity">
+            <extra android:name="shortcutScheme" android:value="searchSong" />
+        </intent>
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_recog" android:enabled="true" android:shortcutId="recognize" android:shortcutShortLabel="@string/hkg" android:shortcutLongLabel="@string/hkg" android:shortcutDisabledMessage="@string/hkg">
+        <intent android:targetPackage="com.newbee.fish.app" android:action="android.intent.action.VIEW" android:targetClass="com.newbee.fish.app.MainActivity">
+            <extra android:name="shortcutScheme" android:value="recognize" />
+        </intent>
+    </shortcut>
+</shortcuts>
